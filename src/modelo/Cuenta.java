@@ -15,6 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -22,7 +23,7 @@ import javax.persistence.Table;
  * @author anderson
  */
 @Entity
-@Table(name = "cuenta")
+@Table(name = "cuenta") //cuenta es entidad debil porque depende dedos entidades mas rol y usuario
 public class Cuenta implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -43,7 +44,10 @@ public class Cuenta implements Serializable {
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_rol_cuenta", nullable = true, referencedColumnName = "id_rol")
     private Rol objeto_rol;
-//    private Usuario objeto_usuario;
+    
+    @OneToOne(cascade = CascadeType.ALL) // nulltable es false xq es codependiente 
+    @JoinColumn(referencedColumnName = "id_usuario", nullable = false, columnDefinition = "id_usuario_cuenta")
+    private Usuario objeto_usuario;
 
     public String getUsername() {
         return username;
