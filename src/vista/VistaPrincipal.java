@@ -50,77 +50,113 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         obj_escritorio_jDesktopPane = new javax.swing.JDesktopPane();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        menuPrincipal_jMenuBar1 = new javax.swing.JMenuBar();
+        archivo_jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
+        cliente_jMenu2 = new javax.swing.JMenu();
+        nuevoCliente_jMenuItem3 = new javax.swing.JMenuItem();
+        listarCliente_jMenuItem4 = new javax.swing.JMenuItem();
+        producto_jMenu3 = new javax.swing.JMenu();
+        nuevoProducto_jMenuItem5 = new javax.swing.JMenuItem();
+        listarProducto_jMenuItem6 = new javax.swing.JMenuItem();
+        venta_jMenu4 = new javax.swing.JMenu();
+        usuario_jMenu5 = new javax.swing.JMenu();
+        nuevoUsuario_jMenuItem2 = new javax.swing.JMenuItem();
+        compra_jMenu6 = new javax.swing.JMenu();
+        proveedor_jMenu2 = new javax.swing.JMenu();
+        ayuda_jMenu7 = new javax.swing.JMenu();
+        manual_jMenuItem7 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().add(obj_escritorio_jDesktopPane, java.awt.BorderLayout.CENTER);
 
-        jMenu1.setText("Archivo");
+        archivo_jMenu1.setText("Archivo");
 
         jMenuItem1.setText("Salir");
-        jMenu1.add(jMenuItem1);
+        archivo_jMenu1.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu1);
+        menuPrincipal_jMenuBar1.add(archivo_jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/Clientes people.png"))); // NOI18N
-        jMenu2.setText("Clientes");
+        cliente_jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/Clientes people.png"))); // NOI18N
+        cliente_jMenu2.setText("Clientes");
 
-        jMenuItem3.setText("Nuevo Cliente");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        nuevoCliente_jMenuItem3.setText("Nuevo Cliente");
+        nuevoCliente_jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                nuevoCliente_jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        cliente_jMenu2.add(nuevoCliente_jMenuItem3);
 
-        jMenuItem4.setText("Listar Clientes");
-        jMenu2.add(jMenuItem4);
+        listarCliente_jMenuItem4.setText("Listar Clientes");
+        cliente_jMenu2.add(listarCliente_jMenuItem4);
 
-        jMenuBar1.add(jMenu2);
+        menuPrincipal_jMenuBar1.add(cliente_jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/producto.png"))); // NOI18N
-        jMenu3.setText("Productos");
+        producto_jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/producto.png"))); // NOI18N
+        producto_jMenu3.setText("Productos");
 
-        jMenuItem5.setText("Nuevo Producto");
-        jMenu3.add(jMenuItem5);
+        nuevoProducto_jMenuItem5.setText("Nuevo Producto");
+        producto_jMenu3.add(nuevoProducto_jMenuItem5);
 
-        jMenuItem6.setText("Listar Productos");
-        jMenu3.add(jMenuItem6);
+        listarProducto_jMenuItem6.setText("Listar Productos");
+        producto_jMenu3.add(listarProducto_jMenuItem6);
 
-        jMenuBar1.add(jMenu3);
+        menuPrincipal_jMenuBar1.add(producto_jMenu3);
 
-        jMenu4.setText("Ventas");
-        jMenuBar1.add(jMenu4);
+        venta_jMenu4.setText("Ventas");
+        menuPrincipal_jMenuBar1.add(venta_jMenu4);
 
-        jMenu5.setText("jMenu5");
-        jMenuBar1.add(jMenu5);
+        usuario_jMenu5.setText("Usuarios");
 
-        jMenu6.setText("jMenu6");
-        jMenuBar1.add(jMenu6);
+        nuevoUsuario_jMenuItem2.setText("jMenuItem2");
+        nuevoUsuario_jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevoUsuario_jMenuItem2ActionPerformed(evt);
+            }
+        });
+        usuario_jMenu5.add(nuevoUsuario_jMenuItem2);
 
-        jMenu7.setText("Ayuda");
-        jMenuBar1.add(jMenu7);
+        menuPrincipal_jMenuBar1.add(usuario_jMenu5);
 
-        setJMenuBar(jMenuBar1);
+        compra_jMenu6.setText("Compras");
+        menuPrincipal_jMenuBar1.add(compra_jMenu6);
+
+        proveedor_jMenu2.setText("Proveedores");
+        menuPrincipal_jMenuBar1.add(proveedor_jMenu2);
+
+        ayuda_jMenu7.setText("Ayuda");
+
+        manual_jMenuItem7.setText("Manual");
+        manual_jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manual_jMenuItem7ActionPerformed(evt);
+            }
+        });
+        ayuda_jMenu7.add(manual_jMenuItem7);
+
+        menuPrincipal_jMenuBar1.add(ayuda_jMenu7);
+
+        setJMenuBar(menuPrincipal_jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void nuevoCliente_jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoCliente_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+        NuevoCliente_JInternalFrame ventana = new NuevoCliente_JInternalFrame();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_nuevoCliente_jMenuItem3ActionPerformed
+
+    private void nuevoUsuario_jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoUsuario_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_nuevoUsuario_jMenuItem2ActionPerformed
+
+    private void manual_jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manual_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manual_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,19 +194,22 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu archivo_jMenu1;
+    private javax.swing.JMenu ayuda_jMenu7;
+    private javax.swing.JMenu cliente_jMenu2;
+    private javax.swing.JMenu compra_jMenu6;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem listarCliente_jMenuItem4;
+    private javax.swing.JMenuItem listarProducto_jMenuItem6;
+    private javax.swing.JMenuItem manual_jMenuItem7;
+    private javax.swing.JMenuBar menuPrincipal_jMenuBar1;
+    private javax.swing.JMenuItem nuevoCliente_jMenuItem3;
+    private javax.swing.JMenuItem nuevoProducto_jMenuItem5;
+    private javax.swing.JMenuItem nuevoUsuario_jMenuItem2;
     private javax.swing.JDesktopPane obj_escritorio_jDesktopPane;
+    private javax.swing.JMenu producto_jMenu3;
+    private javax.swing.JMenu proveedor_jMenu2;
+    private javax.swing.JMenu usuario_jMenu5;
+    private javax.swing.JMenu venta_jMenu4;
     // End of variables declaration//GEN-END:variables
 }
