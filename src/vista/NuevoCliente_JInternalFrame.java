@@ -28,8 +28,135 @@ public class NuevoCliente_JInternalFrame extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        txt_nombre_cliente_jTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txt_apeliido_cliente_jTextField2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txt_cedula_cliente_jTextField3 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txt_direccion_clientejTextField4 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txt_mail_cliente_jTextField5 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txt_telefono_cliente_jTextField6 = new javax.swing.JTextField();
+        btn_guardar_cliente_jButton1 = new javax.swing.JButton();
+        btn_cancelar_guardar_cliente_jButton2 = new javax.swing.JButton();
 
-        jLabel1.setText("Cliente");
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
+        jLabel1.setText("Nuevo Cliente");
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del cliente"));
+
+        jLabel2.setText("Nombres:");
+
+        txt_nombre_cliente_jTextField1.setText("jTextField1");
+        txt_nombre_cliente_jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_nombre_cliente_jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Apellidos:");
+
+        txt_apeliido_cliente_jTextField2.setText("jTextField2");
+
+        jLabel4.setText("Cédula:");
+
+        txt_cedula_cliente_jTextField3.setText("jTextField3");
+
+        jLabel5.setText("Dirección:");
+
+        txt_direccion_clientejTextField4.setText("jTextField4");
+
+        jLabel6.setText("Mail:");
+
+        txt_mail_cliente_jTextField5.setText("jTextField5");
+
+        jLabel7.setText("Telefono:");
+
+        txt_telefono_cliente_jTextField6.setText("jTextField6");
+
+        btn_guardar_cliente_jButton1.setText("Guardar");
+        btn_guardar_cliente_jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_guardar_cliente_jButton1ActionPerformed(evt);
+            }
+        });
+
+        btn_cancelar_guardar_cliente_jButton2.setText("Cancelar");
+        btn_cancelar_guardar_cliente_jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cancelar_guardar_cliente_jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_nombre_cliente_jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+                    .addComponent(txt_apeliido_cliente_jTextField2)
+                    .addComponent(txt_cedula_cliente_jTextField3)
+                    .addComponent(txt_direccion_clientejTextField4)
+                    .addComponent(txt_mail_cliente_jTextField5)
+                    .addComponent(txt_telefono_cliente_jTextField6)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_cancelar_guardar_cliente_jButton2)
+                .addGap(29, 29, 29)
+                .addComponent(btn_guardar_cliente_jButton1)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txt_nombre_cliente_jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txt_apeliido_cliente_jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txt_cedula_cliente_jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txt_direccion_clientejTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txt_mail_cliente_jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txt_telefono_cliente_jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_guardar_cliente_jButton1)
+                    .addComponent(btn_cancelar_guardar_cliente_jButton2))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,22 +164,54 @@ public class NuevoCliente_JInternalFrame extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(248, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txt_nombre_cliente_jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombre_cliente_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nombre_cliente_jTextField1ActionPerformed
+
+    private void btn_guardar_cliente_jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardar_cliente_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_guardar_cliente_jButton1ActionPerformed
+
+    private void btn_cancelar_guardar_cliente_jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelar_guardar_cliente_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_cancelar_guardar_cliente_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cancelar_guardar_cliente_jButton2;
+    private javax.swing.JButton btn_guardar_cliente_jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txt_apeliido_cliente_jTextField2;
+    private javax.swing.JTextField txt_cedula_cliente_jTextField3;
+    private javax.swing.JTextField txt_direccion_clientejTextField4;
+    private javax.swing.JTextField txt_mail_cliente_jTextField5;
+    private javax.swing.JTextField txt_nombre_cliente_jTextField1;
+    private javax.swing.JTextField txt_telefono_cliente_jTextField6;
     // End of variables declaration//GEN-END:variables
 }

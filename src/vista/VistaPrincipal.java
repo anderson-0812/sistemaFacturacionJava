@@ -89,6 +89,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         cliente_jMenu2.add(nuevoCliente_jMenuItem3);
 
         listarCliente_jMenuItem4.setText("Listar Clientes");
+        listarCliente_jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarCliente_jMenuItem4ActionPerformed(evt);
+            }
+        });
         cliente_jMenu2.add(listarCliente_jMenuItem4);
 
         menuPrincipal_jMenuBar1.add(cliente_jMenu2);
@@ -157,6 +162,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private void manual_jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manual_jMenuItem7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_manual_jMenuItem7ActionPerformed
+
+    private void listarCliente_jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarCliente_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        listar_clientes_JInternalFrame ventana = new listar_clientes_JInternalFrame();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_listarCliente_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
