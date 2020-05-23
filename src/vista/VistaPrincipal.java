@@ -59,11 +59,17 @@ public class VistaPrincipal extends javax.swing.JFrame {
         producto_jMenu3 = new javax.swing.JMenu();
         nuevoProducto_jMenuItem5 = new javax.swing.JMenuItem();
         listarProducto_jMenuItem6 = new javax.swing.JMenuItem();
+        nuevaCategoriaProductojMenuItem2 = new javax.swing.JMenuItem();
+        listar_cateProductojMenuItem2 = new javax.swing.JMenuItem();
         venta_jMenu4 = new javax.swing.JMenu();
         usuario_jMenu5 = new javax.swing.JMenu();
         nuevoUsuario_jMenuItem2 = new javax.swing.JMenuItem();
         compra_jMenu6 = new javax.swing.JMenu();
+        nueva_comprajMenuItem2 = new javax.swing.JMenuItem();
+        listarComprajMenuItem2 = new javax.swing.JMenuItem();
         proveedor_jMenu2 = new javax.swing.JMenu();
+        nuevoProveedorjMenuItem2 = new javax.swing.JMenuItem();
+        listarProveedoresjMenuItem2 = new javax.swing.JMenuItem();
         ayuda_jMenu7 = new javax.swing.JMenu();
         manual_jMenuItem7 = new javax.swing.JMenuItem();
 
@@ -102,10 +108,36 @@ public class VistaPrincipal extends javax.swing.JFrame {
         producto_jMenu3.setText("Productos");
 
         nuevoProducto_jMenuItem5.setText("Nuevo Producto");
+        nuevoProducto_jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevoProducto_jMenuItem5ActionPerformed(evt);
+            }
+        });
         producto_jMenu3.add(nuevoProducto_jMenuItem5);
 
         listarProducto_jMenuItem6.setText("Listar Productos");
+        listarProducto_jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listarProducto_jMenuItem6ActionPerformed(evt);
+            }
+        });
         producto_jMenu3.add(listarProducto_jMenuItem6);
+
+        nuevaCategoriaProductojMenuItem2.setText("Nueva Categoria Producto");
+        nuevaCategoriaProductojMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevaCategoriaProductojMenuItem2ActionPerformed(evt);
+            }
+        });
+        producto_jMenu3.add(nuevaCategoriaProductojMenuItem2);
+
+        listar_cateProductojMenuItem2.setText("Listar Categorias Producto");
+        listar_cateProductojMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listar_cateProductojMenuItem2ActionPerformed(evt);
+            }
+        });
+        producto_jMenu3.add(listar_cateProductojMenuItem2);
 
         menuPrincipal_jMenuBar1.add(producto_jMenu3);
 
@@ -114,7 +146,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
         usuario_jMenu5.setText("Usuarios");
 
-        nuevoUsuario_jMenuItem2.setText("jMenuItem2");
+        nuevoUsuario_jMenuItem2.setText("Nuevo Usuario");
         nuevoUsuario_jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nuevoUsuario_jMenuItem2ActionPerformed(evt);
@@ -125,9 +157,23 @@ public class VistaPrincipal extends javax.swing.JFrame {
         menuPrincipal_jMenuBar1.add(usuario_jMenu5);
 
         compra_jMenu6.setText("Compras");
+
+        nueva_comprajMenuItem2.setText("Nueva Compra");
+        compra_jMenu6.add(nueva_comprajMenuItem2);
+
+        listarComprajMenuItem2.setText("Listar Compras");
+        compra_jMenu6.add(listarComprajMenuItem2);
+
         menuPrincipal_jMenuBar1.add(compra_jMenu6);
 
         proveedor_jMenu2.setText("Proveedores");
+
+        nuevoProveedorjMenuItem2.setText("Nuevo Proveedor");
+        proveedor_jMenu2.add(nuevoProveedorjMenuItem2);
+
+        listarProveedoresjMenuItem2.setText("Listar Proveedores");
+        proveedor_jMenu2.add(listarProveedoresjMenuItem2);
+
         menuPrincipal_jMenuBar1.add(proveedor_jMenu2);
 
         ayuda_jMenu7.setText("Ayuda");
@@ -169,6 +215,34 @@ public class VistaPrincipal extends javax.swing.JFrame {
         obj_escritorio_jDesktopPane.add(ventana);
         ventana.show();
     }//GEN-LAST:event_listarCliente_jMenuItem4ActionPerformed
+
+    private void nuevoProducto_jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoProducto_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        NuevoProductoJInternalFrame ventana = new NuevoProductoJInternalFrame();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_nuevoProducto_jMenuItem5ActionPerformed
+
+    private void listarProducto_jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listarProducto_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        listar_productosJInternalFrame ventana = new listar_productosJInternalFrame();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_listarProducto_jMenuItem6ActionPerformed
+
+    private void nuevaCategoriaProductojMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaCategoriaProductojMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        categoriaProducto_JInternalFrame ventana = new categoriaProducto_JInternalFrame();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_nuevaCategoriaProductojMenuItem2ActionPerformed
+
+    private void listar_cateProductojMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_cateProductojMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        listar_categoria_producto_JInternalFrame ventana = new listar_categoria_producto_JInternalFrame();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_listar_cateProductojMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,11 +286,17 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu compra_jMenu6;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem listarCliente_jMenuItem4;
+    private javax.swing.JMenuItem listarComprajMenuItem2;
     private javax.swing.JMenuItem listarProducto_jMenuItem6;
+    private javax.swing.JMenuItem listarProveedoresjMenuItem2;
+    private javax.swing.JMenuItem listar_cateProductojMenuItem2;
     private javax.swing.JMenuItem manual_jMenuItem7;
     private javax.swing.JMenuBar menuPrincipal_jMenuBar1;
+    private javax.swing.JMenuItem nuevaCategoriaProductojMenuItem2;
+    private javax.swing.JMenuItem nueva_comprajMenuItem2;
     private javax.swing.JMenuItem nuevoCliente_jMenuItem3;
     private javax.swing.JMenuItem nuevoProducto_jMenuItem5;
+    private javax.swing.JMenuItem nuevoProveedorjMenuItem2;
     private javax.swing.JMenuItem nuevoUsuario_jMenuItem2;
     private javax.swing.JDesktopPane obj_escritorio_jDesktopPane;
     private javax.swing.JMenu producto_jMenu3;

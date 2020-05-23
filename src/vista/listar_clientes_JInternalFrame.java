@@ -83,11 +83,11 @@ public class listar_clientes_JInternalFrame extends javax.swing.JInternalFrame {
                         .addComponent(jTextField1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnEliminar_cliente_jButton3)
-                        .addGap(18, 18, 18)
                         .addComponent(btnNuevo_cliente_jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_editar_clientejButton1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_editar_clientejButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnEliminar_cliente_jButton3)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
