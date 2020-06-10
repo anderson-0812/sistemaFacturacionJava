@@ -47,6 +47,9 @@ public class Proveedor implements Serializable {
     
     @Column(name="numero_cuenta", length = 200)
     private String numero_cuenta;
+    
+    @Column(name="direccion", length = 300)
+    private String direccion;
 
     public String getNombre_comercial() {
         return nombre_comercial;
@@ -111,9 +114,6 @@ public class Proveedor implements Serializable {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
-    @Column(name="direccion", length = 300)
-    private String direccion;
 
     public Long getId_proveedor() {
         return id_proveedor;

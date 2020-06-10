@@ -43,7 +43,7 @@ public class Producto implements Serializable {
     @Column(name = "stock_producto", length = 200)
     private int stock_producto;
     
-    @Column(name = "stock_producto")
+    @Column(name = "precio_unitario")
     private double precio_unitario;
     
 //    @Column(name = "categoria_producto", length = 200)
@@ -51,7 +51,7 @@ public class Producto implements Serializable {
     
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn(name = "categoria_producto", nullable = true, referencedColumnName = "id_categoria_producto")
-    private String categoria_producto_obj;
+    private CategoriaProducto categoria_producto_obj;
 
     public String getNombre_producto() {
         return nombre_producto;
@@ -93,11 +93,11 @@ public class Producto implements Serializable {
         this.precio_unitario = precio_unitario;
     }
 
-    public String getCategoria_producto_obj() {
+    public CategoriaProducto getCategoria_producto_obj() {
         return categoria_producto_obj;
     }
 
-    public void setCategoria_producto_obj(String categoria_producto_obj) {
+    public void setCategoria_producto_obj(CategoriaProducto categoria_producto_obj) {
         this.categoria_producto_obj = categoria_producto_obj;
     }
 

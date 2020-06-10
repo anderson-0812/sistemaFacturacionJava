@@ -35,6 +35,9 @@ public class DetalleCompra implements Serializable {
     
     @Column(name = "precio_unitario")
     private double precio_unitario;
+    
+    @Column(name = "subtotal_parcial_compra")
+    private double subtotal_parcial_compra;
 
     public int getCantidad() {
         return cantidad;
@@ -67,9 +70,6 @@ public class DetalleCompra implements Serializable {
     public void setSubtotal_parcial_compra(double subtotal_parcial_compra) {
         this.subtotal_parcial_compra = subtotal_parcial_compra;
     }
-    
-    @Column(name = "subtotal_parcial_compra")
-    private double subtotal_parcial_compra;
 
     public Long getId_detalle_compra() {
         return id_detalle_compra;

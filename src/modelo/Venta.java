@@ -41,9 +41,58 @@ public class Venta implements Serializable {
     
     @Column(name = "subtotal_venta")
     private double subtotal_venta;
+
+    @Column(name = "descuento_venta")
+    private double descuento_venta;
+
+    public String getFecha_venta() {
+        return fecha_venta;
+    }
+
+    public void setFecha_venta(String fecha_venta) {
+        this.fecha_venta = fecha_venta;
+    }
+
+    public int getNumero_venta() {
+        return numero_venta;
+    }
+
+    public void setNumero_venta(int numero_venta) {
+        this.numero_venta = numero_venta;
+    }
+
+    public double getTotal_venta() {
+        return total_venta;
+    }
+
+    public void setTotal_venta(double total_venta) {
+        this.total_venta = total_venta;
+    }
+
+    public double getIva_venta() {
+        return iva_venta;
+    }
+
+    public void setIva_venta(double iva_venta) {
+        this.iva_venta = iva_venta;
+    }
+
+    public double getSubtotal_venta() {
+        return subtotal_venta;
+    }
+
+    public void setSubtotal_venta(double subtotal_venta) {
+        this.subtotal_venta = subtotal_venta;
+    }
+
+    public double getDescuento_venta() {
+        return descuento_venta;
+    }
+
+    public void setDescuento_venta(double descuento_venta) {
+        this.descuento_venta = descuento_venta;
+    }
     
-    @Column(name = "subtotal_venta")
-    private String descuento_venta;
 
     public Long getId_venta() {
         return id_venta;

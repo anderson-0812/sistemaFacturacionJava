@@ -34,9 +34,15 @@ public class Conexion {
     public void conectar() throws ClassNotFoundException, SQLException {
 
         try {
+            /*
+            Properties properties = new Properties();
+            properties.setProperty("user", "root");
+            properties.setProperty("password", "");
+            properties.setProperty("useSSL", "false");
+            */
 
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/facturacionJeans", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/facturacionJeans", "admin", "");
 
         } finally {
 

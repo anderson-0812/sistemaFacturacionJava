@@ -38,7 +38,7 @@ public class Usuario implements Serializable {
     @Column(name="email_usuario", length = 200)
     private String email_usuario;
     
-    @Column(name="email_usuario", length = 10)
+    @Column(name="telefono_usuario", length = 10)
     private String telefono_usuario;
 
     public String getNombre_usuario() {

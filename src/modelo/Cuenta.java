@@ -49,6 +49,14 @@ public class Cuenta implements Serializable {
     @JoinColumn(referencedColumnName = "id_usuario", nullable = false, columnDefinition = "id_usuario_cuenta")
     private Usuario objeto_usuario;
 
+    public Usuario getObjeto_usuario() {
+        return objeto_usuario;
+    }
+
+    public void setObjeto_usuario(Usuario objeto_usuario) {
+        this.objeto_usuario = objeto_usuario;
+    }
+
     public String getUsername() {
         return username;
     }
