@@ -64,6 +64,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         venta_jMenu4 = new javax.swing.JMenu();
         usuario_jMenu5 = new javax.swing.JMenu();
         nuevoUsuario_jMenuItem2 = new javax.swing.JMenuItem();
+        administrarRolesjMenuItem2 = new javax.swing.JMenuItem();
         compra_jMenu6 = new javax.swing.JMenu();
         nueva_comprajMenuItem2 = new javax.swing.JMenuItem();
         listarComprajMenuItem2 = new javax.swing.JMenuItem();
@@ -153,6 +154,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
             }
         });
         usuario_jMenu5.add(nuevoUsuario_jMenuItem2);
+
+        administrarRolesjMenuItem2.setText("Administrar Roles");
+        administrarRolesjMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                administrarRolesjMenuItem2ActionPerformed(evt);
+            }
+        });
+        usuario_jMenu5.add(administrarRolesjMenuItem2);
 
         menuPrincipal_jMenuBar1.add(usuario_jMenu5);
 
@@ -244,6 +253,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
         ventana.show();
     }//GEN-LAST:event_listar_cateProductojMenuItem2ActionPerformed
 
+    private void administrarRolesjMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_administrarRolesjMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        AdministrarRoles ventana = new AdministrarRoles();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+        
+    }//GEN-LAST:event_administrarRolesjMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -280,6 +297,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem administrarRolesjMenuItem2;
     private javax.swing.JMenu archivo_jMenu1;
     private javax.swing.JMenu ayuda_jMenu7;
     private javax.swing.JMenu cliente_jMenu2;

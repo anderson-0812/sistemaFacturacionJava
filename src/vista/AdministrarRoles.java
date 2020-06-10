@@ -5,6 +5,13 @@
  */
 package vista;
 
+import controlador.servicios.ServicioRol;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import modelo.Rol;
+import vista.modeloTablas.ModeloTablaRol;
+
 /**
  *
  * @author anderson
@@ -12,10 +19,26 @@ package vista;
 public class AdministrarRoles extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form AdministrarRoles
+     * Creamos una instancia de srvicio rol
      */
+    private ServicioRol sr; 
+    
+    private ModeloTablaRol modeloTabla;
+    private List<Rol> lista_roles;
+    
     public AdministrarRoles() {
+        this.sr = new ServicioRol();
+        this.lista_roles = new ArrayList<Rol>();
+
         initComponents();
+        cargarDatosTablaRoles();
+    }
+    public void cargarDatosTablaRoles(){
+        this.modeloTabla = new ModeloTablaRol();
+        this.lista_roles = this.sr.listar();
+        this.modeloTabla.setLista(this.lista_roles);
+        this.tablaRoles_jTable1.setModel(modeloTabla);
+        this.tablaRoles_jTable1.updateUI();
     }
 
     /**
@@ -29,14 +52,21 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaRoles_jTable1 = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txt_nombreRol_jTextField1 = new javax.swing.JTextField();
+        btn_guardar_rol_jButton1 = new javax.swing.JButton();
+        btn_cancelarRoljButton1 = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
         setMaximizable(true);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Roles Existentes"));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaRoles_jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -47,9 +77,42 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaRoles_jTable1);
 
         jPanel1.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del rol"));
+
+        jLabel1.setText("Nombre:");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(txt_nombreRol_jTextField1))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txt_nombreRol_jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        btn_guardar_rol_jButton1.setText("Guardar");
+        btn_guardar_rol_jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_guardar_rol_jButton1ActionPerformed(evt);
+            }
+        });
+
+        btn_cancelarRoljButton1.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,7 +120,14 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_cancelarRoljButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_guardar_rol_jButton1)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -65,16 +135,46 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_guardar_rol_jButton1)
+                    .addComponent(btn_cancelarRoljButton1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_guardar_rol_jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_guardar_rol_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Rol obj_rol = new Rol();
+        // lenamos el nombre del rol con el campod ela interfaz 
+        obj_rol.setNombre_rol(txt_nombreRol_jTextField1.getText());
+        
+        // usamos el servicio
+        this.sr.fijarInstancia(obj_rol);
+        
+        if(this.sr.guardar()){
+            JOptionPane.showMessageDialog(this, "Rol guardado exitosamente");
+        }else{
+            JOptionPane.showMessageDialog(this, "Rol no se ha guardado");
+        }
+        this.sr.nuevaInstancia();
+        this.txt_nombreRol_jTextField1.setText("");
+        cargarDatosTablaRoles();
+    }//GEN-LAST:event_btn_guardar_rol_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_cancelarRoljButton1;
+    private javax.swing.JButton btn_guardar_rol_jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaRoles_jTable1;
+    private javax.swing.JTextField txt_nombreRol_jTextField1;
     // End of variables declaration//GEN-END:variables
 }
