@@ -42,7 +42,7 @@ public class Conexion {
             */
 
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/facturacionJeans", "admin", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/facturacionJeans2", "admin", "");
 
         } finally {
 

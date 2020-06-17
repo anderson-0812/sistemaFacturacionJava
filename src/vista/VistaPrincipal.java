@@ -211,6 +211,9 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
     private void nuevoUsuario_jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoUsuario_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        NuevaCuentaUsuario ventana = new NuevaCuentaUsuario();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
         
     }//GEN-LAST:event_nuevoUsuario_jMenuItem2ActionPerformed
 

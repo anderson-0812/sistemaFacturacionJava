@@ -38,7 +38,7 @@ public class Cuenta implements Serializable {
     private String password;
     
     @Column(name = "estado_usuario")
-    private boolean estado;
+    private boolean estado_usuario;
     
     // el refresh actualiza los datos dependientes de su registro de relacion
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
@@ -46,7 +46,8 @@ public class Cuenta implements Serializable {
     private Rol objeto_rol;
     
     @OneToOne(cascade = CascadeType.ALL) // nulltable es false xq es codependiente 
-    @JoinColumn(referencedColumnName = "id_usuario", nullable = false, columnDefinition = "id_usuario_cuenta")
+//    @JoinColumn(referencedColumnName = "id_usuario",updatable = false, nullable = false, columnDefinition = "id_usuario_cuenta")
+    @JoinColumn(name = "id_usuario_cuenta", updatable = false, nullable = false)
     private Usuario objeto_usuario;
 
     public Usuario getObjeto_usuario() {
@@ -81,12 +82,12 @@ public class Cuenta implements Serializable {
         this.password = password;
     }
 
-    public boolean isEstado() {
-        return estado;
+    public boolean isEstado_usuario() {
+        return estado_usuario;
     }
 
-    public void setEstado(boolean estado) {
-        this.estado = estado;
+    public void setEstado_usuario(boolean estado_usuario) {
+        this.estado_usuario = estado_usuario;
     }
 
     public Long getId_cuenta() {
