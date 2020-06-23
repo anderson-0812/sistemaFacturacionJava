@@ -282,7 +282,8 @@ public class NuevaCuentaUsuario extends javax.swing.JInternalFrame {
         this.obj_cuenta.setPassword(pswPasswordCuenta.getText());
         this.obj_cuenta.setEstado_usuario(chkEstadoCuenta.isSelected());
         this.obj_cuenta.setObjeto_usuario(this.obj_usuario);
-
+        
+        // extrae el indice del item seleccionado
         this.obj_rol = this.lista_roles.get(cmbRolCuenta.getSelectedIndex());
 
         this.obj_cuenta.setObjeto_rol(this.obj_rol);

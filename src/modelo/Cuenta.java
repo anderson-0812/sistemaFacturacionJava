@@ -45,8 +45,10 @@ public class Cuenta implements Serializable {
     @JoinColumn(name = "id_rol_cuenta", nullable = true, referencedColumnName = "id_rol")
     private Rol objeto_rol;
     
-    @OneToOne(cascade = CascadeType.ALL) // nulltable es false xq es codependiente 
+//    @OneToOne(cascade = CascadeType.ALL) 
+// nulltable es false xq es codependiente 
 //    @JoinColumn(referencedColumnName = "id_usuario",updatable = false, nullable = false, columnDefinition = "id_usuario_cuenta")
+    @OneToOne
     @JoinColumn(name = "id_usuario_cuenta", updatable = false, nullable = false)
     private Usuario objeto_usuario;
 

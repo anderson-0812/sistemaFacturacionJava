@@ -6,16 +6,19 @@
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/modelo/Cuenta.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/controlador/servicios/ServicioCuenta.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/modelo/Usuario.java</file>
+            <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/vista/NuevoCliente_JInternalFrame.java</file>
+            <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/controlador/Conexion.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/modelo/Rol.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/controlador/daos/CuentaDao.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/modelo/CuentasListar.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/controlador/daos/DaoAdaptador.java</file>
-            <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/META-INF/persistence.xml</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/controlador/servicios/ServicioUsuario.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/vista/modeloTablas/ModeloTablaCuentas.java</file>
+            <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/META-INF/persistence.xml</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/controlador/daos/UsuarioDao.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/vista/NuevaCuentaUsuario.java</file>
             <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/vista/VistaPrincipal.java</file>
+            <file>file:/home/anderson/NetBeansProjects/facturacion4toCiclo/src/vista/listar_clientes_JInternalFrame.java</file>
         </group>
     </open-files>
 </project-private>
