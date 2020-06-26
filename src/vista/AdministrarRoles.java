@@ -58,6 +58,7 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
         txt_nombreRol_jTextField1 = new javax.swing.JTextField();
         btn_guardar_rol_jButton1 = new javax.swing.JButton();
         btn_cancelarRoljButton1 = new javax.swing.JButton();
+        btnEliminarRol = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -114,6 +115,13 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
 
         btn_cancelarRoljButton1.setText("Cancelar");
 
+        btnEliminarRol.setText("Eliminar");
+        btnEliminarRol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarRolActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -125,6 +133,8 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnEliminarRol)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btn_cancelarRoljButton1)
                         .addGap(18, 18, 18)
                         .addComponent(btn_guardar_rol_jButton1)))
@@ -140,7 +150,8 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_guardar_rol_jButton1)
-                    .addComponent(btn_cancelarRoljButton1))
+                    .addComponent(btn_cancelarRoljButton1)
+                    .addComponent(btnEliminarRol))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -166,8 +177,26 @@ public class AdministrarRoles extends javax.swing.JInternalFrame {
         cargarDatosTablaRoles();
     }//GEN-LAST:event_btn_guardar_rol_jButton1ActionPerformed
 
+    private void btnEliminarRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRolActionPerformed
+        // TODO add your handling code here:
+        int rol_seleccionado = this.tablaRoles_jTable1.getSelectedRow();
+        //Rol objeto_eliminar = this.lista_roles.get(rol_seleccionado);
+        //System.out.println(objeto_eliminar.getNombre_rol());
+        int opcion = JOptionPane.showConfirmDialog(this, "Estás seguro que deseas eliminar");
+        this.sr.fijarInstancia(this.lista_roles.get(rol_seleccionado));
+        if (opcion == 0) {
+            if (this.sr.eliminar(this.lista_roles.get(rol_seleccionado))) {
+                JOptionPane.showMessageDialog(this, "OBJETO ELIMINADO");
+                cargarDatosTablaRoles();
+            } else {
+                JOptionPane.showMessageDialog(this, "NO SE PUDO ELIMINAR");
+            }
+        } 
+    }//GEN-LAST:event_btnEliminarRolActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEliminarRol;
     private javax.swing.JButton btn_cancelarRoljButton1;
     private javax.swing.JButton btn_guardar_rol_jButton1;
     private javax.swing.JLabel jLabel1;

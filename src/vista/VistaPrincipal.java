@@ -64,6 +64,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         venta_jMenu4 = new javax.swing.JMenu();
         usuario_jMenu5 = new javax.swing.JMenu();
         nuevoUsuario_jMenuItem2 = new javax.swing.JMenuItem();
+        menuListarUsuariojMenuItem2 = new javax.swing.JMenuItem();
         administrarRolesjMenuItem2 = new javax.swing.JMenuItem();
         compra_jMenu6 = new javax.swing.JMenu();
         nueva_comprajMenuItem2 = new javax.swing.JMenuItem();
@@ -154,6 +155,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
             }
         });
         usuario_jMenu5.add(nuevoUsuario_jMenuItem2);
+
+        menuListarUsuariojMenuItem2.setText("Listar cuentas de usuario");
+        menuListarUsuariojMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuListarUsuariojMenuItem2ActionPerformed(evt);
+            }
+        });
+        usuario_jMenu5.add(menuListarUsuariojMenuItem2);
 
         administrarRolesjMenuItem2.setText("Administrar Roles");
         administrarRolesjMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -264,6 +273,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_administrarRolesjMenuItem2ActionPerformed
 
+    private void menuListarUsuariojMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuListarUsuariojMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        ListaCuentasUsuario ventana = new ListaCuentasUsuario();
+        obj_escritorio_jDesktopPane.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_menuListarUsuariojMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -312,6 +328,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem listarProveedoresjMenuItem2;
     private javax.swing.JMenuItem listar_cateProductojMenuItem2;
     private javax.swing.JMenuItem manual_jMenuItem7;
+    private javax.swing.JMenuItem menuListarUsuariojMenuItem2;
     private javax.swing.JMenuBar menuPrincipal_jMenuBar1;
     private javax.swing.JMenuItem nuevaCategoriaProductojMenuItem2;
     private javax.swing.JMenuItem nueva_comprajMenuItem2;
